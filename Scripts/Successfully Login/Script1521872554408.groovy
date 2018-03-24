@@ -18,4 +18,19 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://www.facebook.com/')
+
+WebUI.setText(findTestObject('Login/Page_Facebook - Masuk atau Daftar/input_email'), 'myqamailtest@gmail.com')
+
+WebUI.setText(findTestObject('Login/Page_Facebook - Masuk atau Daftar/input_pass'), 'admin54321')
+
+WebUI.click(findTestObject('Login/Page_Facebook - Masuk atau Daftar/label_loginbutton'))
+
+WebUI.verifyElementVisible(findTestObject('Login/Page_Facebook/div_Gede Haditest'))
+
+WebUI.closeBrowser()
 
